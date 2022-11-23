@@ -1,0 +1,2 @@
+# cryptoWatch
+Visualize Crypto prices
