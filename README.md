@@ -1,3 +1,3 @@
-# cryptoWatch
+# GPT-songwriter
 
-Visualize Crypto prices. Uses CoinMarketCap and CryptoNews API. Made with React.
+Use GPT-3 to write songs with custom parameters. Utilizes OpenAI's GPT-3 and React.
