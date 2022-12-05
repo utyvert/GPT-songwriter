@@ -3,11 +3,15 @@ import { Router, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
+
+
+
 export default function AddTopicComponent() {
 
   
   const [inputValue, setInputValue] = useState('');
   const [topicList, setTopicList] = useState([]);
+  
 
   const handleChange = e => {
     setInputValue(e.target.value)
@@ -65,3 +69,5 @@ export default function AddTopicComponent() {
     </div>
   )
 }
+
+

@@ -3,17 +3,18 @@ import React, {useState} from 'react'
 import AddTopicComponent from '../components/AddTopicComponent';
 import Genre from '../components/Genre';
 import Structure from '../components/Structure';
+import Display from '../components/Display';
 
 
 export default function Home() {
   return (
       <div className="Home">
-        <div className="horiz-div">
-          <Genre />
-          <Structure />
-        </div>
-        
+        <Genre />
+        <Structure />
         <AddTopicComponent />
+        <Display />
+
+
       </div>
   )
 }
