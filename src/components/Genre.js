@@ -4,19 +4,21 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 
-function Genre() {
+function Genre(props) {
 
-  const [selectedOption, setSelectedOption] = useState("Genre");
+  // const [selectedOption, setSelectedOption] = useState("Genre");
+
 
   const handleSelect = (eventKey) => {
-    setSelectedOption(eventKey);
+    props.updateGenre(eventKey)
+    // setSelectedOption(eventKey);
   };
   return (
     <div className="dropdown-container">
       <div className="dropdown">
         <Dropdown onSelect={handleSelect}>
           <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-            {selectedOption}
+            {props.genre}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>

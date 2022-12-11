@@ -1,13 +1,15 @@
-import React from 'react'
+import { React, useState } from 'react'
 
 function Display() {
 
+  const [displayText, setDisplayText] = useState('')
 
 
 
   return (
-    <div>
-      <p>{}</p>
+    <div className='Display'>
+      <p>Hello</p>
+      <p>{displayText}</p>
     </div>
   )
 }

@@ -2,25 +2,31 @@
 import React, { useState } from 'react';
 import { Button, ListGroup, Container } from 'react-bootstrap';
 
-const Structure = () => {
+const Structure = (props) => {
   const [items, setItems] = useState([]);
 
   const handleAddItem = (item) => {
-    if(items.length > 4) {
+    if(props.items.length >= 5) {
       alert("You can only have 5 sections.")
     } else {
-      setItems([...items, item]);
+      // setItems([...items, item]);
+      const newItems = [...props.items, item]
+      props.updateItems(newItems)
     }
   };
 
+
+
   const handleRemoveItem = (index) => {
-    const newItems = [...items];
+    const newItems = [...props.items];
     newItems.splice(index, 1);
-    setItems(newItems);
+    props.updateItems(newItems)
+
   };
 
   const handleClearAll = () => {
-    setItems([]);
+    console.log(props.items)
+    props.updateItems([])
   };
 
   return (
@@ -34,7 +40,7 @@ const Structure = () => {
       </Container>
 
       <ListGroup horizontal className='Structure--list'>
-        {items.map((item, index) => (
+        {props.items.map((item, index) => (
           <ListGroup.Item key={index}>
             {item}
             <Button

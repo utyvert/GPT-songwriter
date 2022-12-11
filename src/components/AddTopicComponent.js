@@ -6,7 +6,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 
-export default function AddTopicComponent() {
+export default function AddTopicComponent(props) {
 
   
   const [inputValue, setInputValue] = useState('');
@@ -24,6 +24,7 @@ export default function AddTopicComponent() {
       setTopicList([...topicList, inputValue]);
       // Clear the input box
       setInputValue('');
+      props.updateTopicList([...topicList, inputValue])
       } else {
         window.alert('You can only have 4 topics.')
       }
@@ -32,7 +33,7 @@ export default function AddTopicComponent() {
   }
 
   const clearList = () => {
-    setTopicList([]);
+    props.updateTopicList([])
   }
   
 
