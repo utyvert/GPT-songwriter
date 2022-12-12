@@ -4,7 +4,7 @@ import AddTopicComponent from '../components/AddTopicComponent';
 import Genre from '../components/Genre';
 import Structure from '../components/Structure';
 import Display from '../components/Display';
-import { GPT3 } from '../components/GPT3';
+import GPT3 from '../components/GPT3';
 import { Button } from 'react-bootstrap';
 
 
@@ -36,12 +36,6 @@ export default function Home() {
   }
 
   
-
-
-
-
-
-
 
   return (
       <div className="Home">

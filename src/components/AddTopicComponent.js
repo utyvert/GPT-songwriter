@@ -33,7 +33,7 @@ export default function AddTopicComponent(props) {
   }
 
   const clearList = () => {
-    props.updateTopicList([])
+    props.updateTopicList([]);
   }
   
 
@@ -62,7 +62,7 @@ export default function AddTopicComponent(props) {
       </div>
       <div className="ATC--list">
         <ul>
-          {topicList.map(item => (
+          {props.topicList.map(item => (
             <li key={item}>{item}</li>
           ))}
         </ul>
